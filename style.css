@@ -1,0 +1,166 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Teko', sans-serif;
+    
+    text-decoration:none
+}
+.container {
+    background:url("./hotel.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+.navbar {
+  
+    width:100%;
+    top:0px;
+    right:0px;
+    z-index:999;
+    display:flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 40px;
+    
+}
+.subdiv {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+    transition:0.5s;
+    
+
+}
+.subdiv a {
+    color:white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: 800;
+    padding:10px 20px;
+    border-radius: 10px;
+    font-weight: 800;   
+    animation-name: slideDown;
+    animation-duration: 0.6s;
+
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-15px);
+        opacity:0;
+    }
+    to { 
+        transform: translateY(0px);
+        opacity:1
+    }
+}
+.subdiv a:hover {
+    transition: all 0.8s;
+    background-color:red;
+}
+.navbar a img {
+    animation: slideDown 0.6s forwards;
+}
+.navbar i {
+     display:none
+}
+input {
+    display:none
+}
+input:checked ~ .subdiv {
+  
+    left:0;
+}
+div h1{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#fff;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 12%;
+    animation:slideRight 0.6s forwards;
+    
+    
+}
+@keyframes slideRight {
+    from {
+        transform: translateX(-50px);
+        opacity:0;
+    }
+    to {
+        transform: translateX(0);
+        opacity:1
+    }
+}
+div .btn {
+    display: flex;
+    justify-content: center;
+    padding:10px 20px;
+    background-color:red;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 800;
+    font-size: 20px;
+    color: #fff;
+    animation:slideUp 0.6s forwards;
+}
+@keyframes slideUp {
+    from {
+        transform:translateY(30px);
+        opacity:0
+    }
+    to {
+        transform: translateY(0px);
+        opacity:1
+    }
+}
+@media screen and (max-width:920px) {
+    .subdiv {
+         height:90vh;
+         position:fixed;
+         justify-content: space-evenly;
+         flex-direction: column;
+         background-color:black;
+         width:100%;
+         gap:20px;
+         left:100%;
+         top:100px;
+         z-index:99      
+     }
+     .subdiv a {       
+        border:black;
+        color:white
+     }
+     .subdiv a:hover {
+        color:#fff
+     }
+     .navbar i {
+         font-size: 25px;
+         display:block
+     }
+    .row {
+        display:flex;
+        flex-direction: column;
+        margin-top:80px
+        
+            }
+        }
+@media screen and (max-width:450px) {
+    .navbar {
+  
+        
+        
+        padding:20px 20px;
+        
+    }
+
+}
